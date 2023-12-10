@@ -1,3 +1,4 @@
+mkdir test-data -Force
 cd test-data
 
 mkdir subfolder1 -Force

@@ -19,7 +19,7 @@ services:
     image: dpage/pgadmin4
     user: root
     depends_on:
-      - postgres-test
+      - postgres
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@localhost.com
       PGADMIN_DEFAULT_PASSWORD: admin
@@ -36,7 +36,6 @@ services:
     entrypoint: >
       /bin/sh -c "
         /bin/echo 'postgres:5432:*:postgres:postgres' > /tmp/pgpassfile
-        /bin/echo 'postgres-test:5432:*:postgres:postgres' >> /tmp/pgpassfile
         chmod 600 /tmp/pgpassfile
         /entrypoint.sh
       "
