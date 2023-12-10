@@ -36,7 +36,7 @@ CREATE TABLE file_system_entry (
     name TEXT NOT NULL,
     path TEXT NOT NULL,
     size INTEGER NOT NULL,
-    is_folder INTEGER NOT NULL,
+    is_folder BOOLEAN,
     parent_id INTEGER
 );
 ```
